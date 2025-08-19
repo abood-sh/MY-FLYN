@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_flyn/core/routing/app_router.dart';
+import 'package:my_flyn/core/routing/routers.dart';
 import 'package:my_flyn/core/theming/colors.dart';
 import 'package:my_flyn/features/flyn/ui/flyn_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyFlyn());
+  runApp(MyFlyn(appRouter: AppRouter()));
 }
 
 class MyFlyn extends StatelessWidget {
-  const MyFlyn({super.key});
+  final AppRouter appRouter;
+
+  const MyFlyn({super.key, required this.appRouter});
 
   // This widget is the root of your application.
   @override
@@ -17,7 +22,7 @@ class MyFlyn extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'My Flyn',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -25,6 +30,8 @@ class MyFlyn extends StatelessWidget {
           fontFamily: "Pretendard",
         ),
         home: const FlynPage(),
+        initialRoute: Routers.myFlynScreen,
+        onGenerateRoute: appRouter.generateRoute,
       ),
     );
   }

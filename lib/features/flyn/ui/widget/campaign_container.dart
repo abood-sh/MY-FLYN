@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_flyn/core/helpers/extension.dart';
 import 'package:my_flyn/core/helpers/spacing.dart';
+import 'package:my_flyn/core/routing/routers.dart';
 import 'package:my_flyn/core/theming/colors.dart';
 import 'package:my_flyn/core/theming/styles.dart';
 
@@ -28,11 +30,14 @@ class CampaignContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("나의 캠페인", style: TextStyles.font12GraySemiBold),
-              Icon(
-                Icons.arrow_forward_ios,
-                size: 16.w,
-                weight: 4.73,
-                color: ColorsManager.black,
+              GestureDetector(
+                onTap: () => context.pushNamed(Routers.campaignScreen),
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  size: 16.w,
+                  weight: 4.73,
+                  color: ColorsManager.black,
+                ),
               ),
             ],
           ),

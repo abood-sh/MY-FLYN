@@ -31,4 +31,44 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: ColorsManager.black,
   );
+  static TextStyle font16BlackSemiBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.black,
+  );
+  static TextStyle font16TabGraySemiBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.tabGray,
+  );
+  static TextStyle font13TabGrayRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.moreGray,
+  );
+  static TextStyle font10MainLightMauveSemiBold = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.mainLightMauve,
+  );
+  static TextStyle font16GrayRegular = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.textFieldGray,
+  );
+  static TextStyle font16WhiteRegular = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.white,
+  );
+  static TextStyle font16RegularBlack = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.black,
+  );
+  static TextStyle font16RegularGray = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.lightGray,
+  );
 }
