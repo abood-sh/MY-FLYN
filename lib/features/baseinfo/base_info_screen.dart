@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:my_flyn/core/helpers/app_regex.dart';
 import 'package:my_flyn/core/helpers/spacing.dart';
 import 'package:my_flyn/core/theming/colors.dart';
@@ -8,12 +9,15 @@ import 'package:my_flyn/core/theming/styles.dart';
 import 'package:my_flyn/core/widget/app_text_button.dart';
 import 'package:my_flyn/core/widget/app_text_form_field.dart';
 import 'package:my_flyn/core/widget/custom_app_bar.dart';
+import 'logic/base_info_controller.dart';
 
 class BaseInfoPage extends StatelessWidget {
   const BaseInfoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(BaseInfoController());
+
     return Scaffold(
       backgroundColor: ColorsManager.white,
       appBar: CustomAppBar(),
@@ -135,13 +139,27 @@ class BaseInfoPage extends StatelessWidget {
                 ),
                 hintStyle: TextStyles.font16RegularBlack,
                 backgroundColor: ColorsManager.white,
-                validator: (p0) {},
+                validator: (value) {},
               ),
               verticalSpace(40),
-              AppTextButton(
-                buttonText: "저장하기",
-                textStyle: TextStyles.font16WhiteRegular,
-                onPressed: () {},
+              Obx(
+                () => controller.isLoading.value
+                    ? Center(child: CircularProgressIndicator())
+                    : AppTextButton(
+                        buttonText: "저장하기",
+                        textStyle: TextStyles.font16WhiteRegular,
+                        onPressed: controller.saveForm,
+                      ),
+              ),
+              verticalSpace(10),
+              // Show save result message
+              Obx(
+                () => controller.saveResult.value.isNotEmpty
+                    ? Text(
+                        controller.saveResult.value,
+                        style: TextStyle(color: Colors.green),
+                      )
+                    : SizedBox.shrink(),
               ),
               verticalSpace(15),
             ],

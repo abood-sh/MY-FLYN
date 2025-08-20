@@ -45,7 +45,6 @@ class FlynTopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FlynImageController controller = Get.put(FlynImageController());
-
     return Row(
       children: [
         Column(

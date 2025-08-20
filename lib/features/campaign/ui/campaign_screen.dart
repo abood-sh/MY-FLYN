@@ -52,70 +52,66 @@ class CampaignPage extends StatelessWidget {
                       itemCount: 10,
                       separatorBuilder: (context, index) => verticalSpace(15.h),
                       itemBuilder: (context, index) {
-                        return Container(
-                          width: 335.w,
-                          height: 100.h,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                height: 100.h,
-                                child: Image.asset('assets/images/natural.png'),
-                              ),
-                              horizontalSpace(10.w),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '회사명 나오는 자리',
-                                      style: TextStyles.font14BlackSemiBold,
-                                    ),
-                                    verticalSpace(4),
-                                    Text(
-                                      '소개말 나오는 자리입니다 한줄만 나옵니다. 소개말 나...',
-                                      style: TextStyles.font13TabGrayRegular,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 2,
-                                    ),
-                                    Spacer(),
-                                    Row(
-                                      children: [
-                                        CustomContainer(
-                                          width: 36.w,
-                                          height: 23.h,
-                                          text: "F&B",
-                                        ),
-                                        horizontalSpace(4.w),
-                                        CustomContainer(
-                                          width: 36.w,
-                                          height: 23.h,
-                                          text: "패션",
-                                        ),
-                                        horizontalSpace(4.w),
+                        return Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: 100.w,
+                              height: 100.h,
+                              child: Image.asset('assets/images/natural.png'),
+                            ),
+                            horizontalSpace(10.w),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '회사명 나오는 자리',
+                                    style: TextStyles.font14BlackSemiBold,
+                                  ),
+                                  verticalSpace(4),
+                                  Text(
+                                    '소개말 나오는 자리입니다 한줄만 나옵니다. 소개말 나...',
+                                    style: TextStyles.font13TabGrayRegular,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                  ),
+                                  Spacer(),
+                                  Row(
+                                    children: [
+                                      CustomContainer(
+                                        width: 36.w,
+                                        height: 23.h,
+                                        text: "F&B",
+                                      ),
+                                      horizontalSpace(4.w),
+                                      CustomContainer(
+                                        width: 36.w,
+                                        height: 23.h,
+                                        text: "패션",
+                                      ),
+                                      horizontalSpace(4.w),
 
-                                        CustomContainer(
-                                          width: 56.w,
-                                          height: 23.h,
-                                          text: "육아/키즈",
-                                        ),
-                                        horizontalSpace(4.w),
+                                      CustomContainer(
+                                        width: 56.w,
+                                        height: 23.h,
+                                        text: "육아/키즈",
+                                      ),
+                                      horizontalSpace(4.w),
 
-                                        CustomContainer(
-                                          width: 73.w,
-                                          height: 23.h,
-                                          text: "리빙/인테리어",
-                                        ),
-                                      ],
-                                    ),
-                                    verticalSpace(4),
-                                  ],
-                                ),
+                                      CustomContainer(
+                                        width: 73.w,
+                                        height: 23.h,
+                                        text: "리빙/인테리어",
+                                      ),
+                                    ],
+                                  ),
+                                  verticalSpace(4),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         );
                       },
                     ),
