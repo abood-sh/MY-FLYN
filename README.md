@@ -6,6 +6,11 @@ This document provides a high-level overview of the MY-FLYN Flutter application,
 ## Application Overview
 MY-FLYN is a Flutter-based mobile application that serves as a comprehensive platform for user profile management and campaign tracking. The application features a Korean-localized interface using the Pretendard font family and implements a modern material design aesthetic with a custom mauve color scheme.
 
+video: https://github.com/user-attachments/assets/a2c219e3-1f8a-4545-a2f9-c4a1c6609573 
+
+apk app: https://drive.google.com/file/d/14xGodG1Edx-ghc1Cg3BC1-DT1YD34Y8e/view?usp=sharing
+
+
 The application name "my_flyn" as defined in 
 `android/app/src/main/AndroidManifest.xml`
 suggests a personalized platform, while the architecture indicates functionality focused on user data management, campaign organization, and media handling capabilities.
